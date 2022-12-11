@@ -1,0 +1,873 @@
+000 - Bomb?
+001 - Bomb?
+002 - Red Bomb?
+003 - Red Bomb?
+004 - Remote Bomb
+005 - Red Remote Bomb
+006 - Altair Sphere Merge Bubble?
+007 - Blue Explosion?
+008 - Spiked Explosion
+009 - Spiked Explosion
+010 - Flat Triangle
+011 - Flat Triangle
+012 - ?
+013 - Spiked Explosion
+014 - Spiked Explosion 2
+015 - Sphere
+016 - Explosion?
+017 - Explosion?
+018 - Fire Power up
+019 - Bomb Power up
+020 - Red Bomb Power up
+021 - Remote Bomb Power up
+022 - Heart Power up
+023 - Skull Power up
+024 - Evil Power up 
+025 - Gold Card
+026 - 
+027 - 
+028 - 
+029 - 
+030 - Gem
+031 - Gem
+032 - 
+033 - 
+034 - Shadow?
+035 - Unused logo
+036 - 
+037 - 
+038 - 
+039 - Overworld map Screen
+040 - 
+041 - Green Garden Overworld Dragon
+042 - World Floor Plane
+043 - Overworld Chain?
+044 - Stage Select Dialog
+045 - Green Garden Overworld Map
+046 - Red Mountain Overworld Map
+047 - White Glacier Overworld Map
+048 - -
+049 - -
+050 - Multiplayer Stage Select
+051 - Horizontal Square Tube/Multiplayer Stage Select Text?
+052 - Vertical Square Tube/Multiplayer Stage Select Column?
+053 - 
+054 - -
+055 - 
+056 - 
+057 - 
+058 - 
+059 - Multiplayer Victory Podium
+060 - Multiplayer Victory Lights
+061 - 
+062 - Draw Multiplayer Text
+063 - Times Up Multiplayer Text
+064 - Multiplayer Point Coin
+065 - 
+066 - 
+067 - 
+068 - 
+069 - 
+070 - 
+071 - 
+072 - 
+073 - ?
+074 - 
+075 - 
+076 - 
+077 - 
+078 - 
+079 - 
+080 - Gold Bomber Head
+081 - Sunglasses Head
+082 - Cat Suit Head
+083 - Dragon Suit Head
+084 - Girl Outfit Head
+085 - Iron Suit Head
+086 - Knight Suit Head
+087 - Karate Outfit Head
+088 - Chicken Head
+089 - Samurai Head
+090 - Gold Bomber Body
+091 - Duck Float Body
+092 - Cat Suit Body
+093 - Dragon Suit Body
+094 - Girl Outfit Body
+095 - Iron Suit Body
+096 - Knight Suit Body
+097 - Karate Outfit Body
+098 - Horse Saddle Body
+099 - Samurai Body
+100 - Gold Bomber Arms
+101 - Drill Arms
+102 - Cat Suit Arms
+103 - Dragon Suit Arms
+104 - Slash Claws Arms
+105 - Iron Suit Arms
+106 - Knight Suit Arm1
+107 - Boxing Gloves Arm
+108 - Chicken Wings Arms
+109 - Samurai Outfit Arms
+110 - Gold Bomber Arms2
+111 - Drill Arms2
+112 - Cat Suit Arms2
+113 - Dragon Suit Arms2
+114 - Slash Claws Arms2
+115 - Iron Suit Arms2
+116 - Knight Suit Arms2
+117 - Boxing Glove Arms2
+118 - Chicken Wings Arms2
+119 - Samurai Outfit Arms2
+120 - Gold Bomber Legs
+121 - Duck Feet Legs
+122 - Cat Suit Legs
+123 - Dragon Suit Legs
+124 - Girl Outfit Legs
+125 - Iron Suit Legs
+126 - Knight Suit Legs
+127 - Karate Outfit Legs
+128 - Bunny Socks Legs
+129 - High Heels Legs
+130 - Gold Bomber Legs2
+131 - Duck Feet Legs2
+132 - Cat Suit Legs2
+133 - Dragon Suit Legs2
+134 - Girl Outfit Legs2
+135 - Iron Suit Legs2
+136 - Knight Suit Legs2
+137 - Karate Outfit Legs2
+138 - Bunny Socks Legs2
+139 - High Heels Legs2
+140 - Item Crate (box)?
+141 - Item Crate (box)?
+142 - Tall Item Crate (box)?
+143 - Green Garden Stage 1 Stone Geometry
+144 - Green Garden Stage 1 Column
+145 - Green Garden Stage Bomb Stone Cube?
+146 - Green Garden Stage 3 Column?
+147 - Green Garden Stage 1 Pots
+148 - Green Garden Stage 3 Bomb Lift
+149 - Green Garden Stage 3 Floating Tile
+150 - Flat Square
+151 - Blue Resort Stage 1 Tree
+152 - Blue Resort Cannonball Sprite?
+153 - Blue Resort Stage 1/3 Crates
+154 - Blue Resort Stage 1/3 Bomb Drains
+155 - Blue Resort Stage 1Flower pot?
+156 - Blue Resort Stage 1 Bomb Wall
+157 - Red Mountain Level Geometry
+158 - Red Mountain Level Geometry
+159 - Red Mountain Stage 3 Machine
+160 - Red Mountain Stage 1 Metal Door
+161 - Red Mountain Stage 3 Tall Barrel
+162 - Red Mountain Stage 3 Barrel
+163 - Red Mountain Stage 3 Mine Cart
+164 - Red Mountain Stage 3 Traffic Light
+165 - Black Fortress Stage 1 Pillar
+166 - Black Fortress Stage 1 Box
+167 - Black Fortress Stage 1 Lampposts
+168 - Black Fortress Stage 1 Lampposts
+169 - Black Fortress Stage 1 Lampposts
+170 - Black Fortress Stage 1 Lampposts
+171 - Black Fortress Stage 1 Small Vehicle
+172 - Black Fortress Stage 1 Long Vehicle
+173 - Black Fortress Stage 1 End Enemy Cannon
+174 - Black Fortress Stage 1 End Enemy Cannon Shot?
+175 - Black Fortress Stage 1 End Enemy Mid
+176 - Black Fortress Stage 1 Lampposts
+177 - Black Fortress Stage 1 Turret Enemy
+178 - Black Fortress Stage 3 Platform On
+179 - Black Fortress Stage 1 Walkway
+180 - Black Fortress Stage 1 Lampposts
+181 - Unused Missle Trooper Variant?
+182 - Black Fortress pointy thing? Overworld?
+183 - Black Fortress Crystal/Gem?
+184 - 
+185 - 
+186 - Black Fortress Stage 3 Undo Icon
+187 - Black Fortress Stage 1 Walkway
+188 - Black Fortress Stage 1 End Enemy Platform
+189 - Rectangle Green and yellow, thunder? Tube?
+190 - Black Fortress Stage 3 Green Platform Room 1
+191 - Black Fortress Stage 3 Switch 1
+192 - Black Fortress Stage 3 Switch 2
+193 - Black Fortress Stage 3 Switch 3
+194 - Black Fortress Stage 3 Locking Door
+195 - Black Fortress Stage 1 Lampposts
+196 - Black Fortress Stage 3 Switch 4
+197 - Black Fortress Stage 3 Floor Panel
+198 - Black Fortress Stage 3 Floor Panel
+199 - Black Fortress Stage 3 Room Walls?
+200 - Black Fortress Stage 1/3 Locking Doors?
+201 - Space Pirates Emblem
+202 - Black Fortress Stage 3 Platform Off
+203 - Black Fortress Stage 1 Turret Lockon Red
+204 - Black Fortress Stage 1 Turret Lockon Green
+205 - Pillar?
+206 - Vertical Pillar
+207 - Rainbow Palace Stage 1 Pillar 1
+208 - Rainbow Palace Stage 1 Pillar 2
+209 - Rainbow Palace Stage 1 Block
+210 - Overworld Rainbow Palace Base?
+211 - 
+212 - Stone Block?
+213 - Stone Block?
+214 - 
+215 - Red Mountain Stage 1/3 Level Geometry?
+216 - Stone Block. used?
+217 - Red Mountain Stage 3 Slant Barrel?
+218 - White Glacier Stage 3 Bomb Icicle
+219 - Crate?
+220 - 
+221 - 
+222 - Red Soldier/Trooper Enemy
+223 - Red Soldier/Trooper Enemy
+224 - Blue Soldier/Trooper Enemy
+225 - Green Trooper
+226 - Green Garden Stage 3 Flare Bird?
+227 - Green Garden Stage 1 Enemy Totem Head
+228 - Green Garden Stage 1 Enemy Mash
+229 - White Glacier Snow Flake
+230 - Blue Resort Stage 1 Guard Enemy
+231 - Blue Resort Fish Enemy
+232 - Blue Resort Fish Enemy swimming
+233 - Blue Resort Jelly fish
+234 - Green Garden Stage 3 Annoying Bird
+235 - Red Mountain Stage 1 Fire Spike
+236 - Red Mountain Stage 1 Pick Enemy
+237 - Red Mountain Stage 1 Stalker Bat
+238 - Red Mountain Stage 1/3 Spin Spilke
+239 - Black Fortress Stage 3 Purple Soldier/Trooper
+240 - White Glacier Stage 1/3 Snowman
+241 - White Glacier Stage 1 Snow Rabbit
+242 - Green Garden Stage 1 Mash Enemy
+243 - White Glacier Stage 3 Freezy Enemy
+244 - White Glacier Snow Flake
+245 - Snake Jar Enemy?
+246 - Black Fortress Stage 3 Cannon Mech
+247 - ?
+248 - Black Fortress Stage 1 Ufo Enemy
+249 - Black Fortress Stage 1/3 Dive Mech
+250 - Green Enemy Head with Glasses
+251 - Rainbow Palace Stage 1/3 Heart King Enemy
+252 - Rainbow Palace Stage 1/3 Spade Knight Enemy
+253 - Rainbow Palace Stage 1/3 Diamond Soldier  Enemy
+254 - Rainbow Palace Stage 1/3 Club Fighter Enemy
+255 - Rainbow Palace Stage 1/3 Eleki Enemy
+256 - same as 246?
+257 - Black Fortress Hazard Enemy?
+258 - Blue Resort Guard Bullet
+259 - Enegy Orb?
+260 - -
+261 - Blue Resort Stage 4 Bubble?
+262 - Black Fortress Stage 2 Boss Missile
+263 - Purple/pink Hexagon?
+264 - Rectangle Spade image Rgba32
+265 - Thunderbolt hexagon?
+266 - Red Mountain Fires Sprite?
+267 - 
+268 - Flat Triangle
+269 - 
+270 - Flat Triangle
+271 - 
+272 - Flat Triangle
+273 - 
+274 - Flat Triangle
+275 - 
+276 - Flat Triangle
+277 - 
+278 - Stunned Effect?
+279 - Flat Triangle
+280 - Flat Triangle
+281 - -
+282 - Energy thing?
+283 - 
+284 - Flat Triangle
+285 - Flat Triangle
+286 - -
+287 - Flat Triangle
+288 - Flat Triangle
+289 - 
+290 - Red Mountain Fireball sprite?
+291 - Flat Triangle
+292 - 
+293 - Flat Triangle
+294 - 
+295 - Flat Triangle
+296 - 
+297 - Red Mountain Fireball sprite?
+298 - Energy thing?
+299 - Stunned Effect
+300 - White Glacier Snow Particle?
+301 - White Glacier Snow Particle?
+302 - White Glacier Snow Particle?
+303 - Flat Triangle
+304 - 
+305 - 
+306 - Test Room
+307 - 
+308 - Test Room
+309 - 
+310 - Test Room
+311 - 
+312 - Test Room
+313 - -
+314 - Blue Resort Stage 1 Starting Room
+315 - Blue Resort Stage 1 second room
+316 - Blue Resort Stage 1 Middle Platform Room
+317 - Blue Resort Stage 1/3 Top Room?
+318 - Blue Resort Stage 3 Starting Room
+319 - Blue Resort Stage 3 Exit Room
+320 - 
+321 - 
+322 - 
+323 - 
+324 - 
+325 - 
+326 - Space Pirates Emblem
+327 - Red Mountain Iron Wall Texture?
+328 - Blue Resort Roof Texture
+329 - Blue Resort Switch
+330 - Blue Resort Dam?
+331 - Blue Resort Waterfall?
+332 - Blue Resort Water FloorTile
+333 - Blue Resort Water FloorTile
+334 - Blue Resort Water Edge
+335 - Blue Resort Water Ripple
+336 - Water Plane?
+337 - Water Plane?
+338 - Blue Resort Stage 3 Exit Waterfall
+339 - Water Planes?
+340 - 
+341 - 
+342 - 
+343 - 
+344 - 
+345 - 
+346 - 
+347 - 
+348 - Blue Resort Stage 1/3 Bridge?
+349 - Blue Resort Stage 1/3 Bridge?
+350 - Blue Resort Stage 1/3 Bridge?
+351 - Blue Resort Stage 1 Exit Bridge?
+352 - Blue Resort Stage 1 Window Tile
+353 - Blue Resort Stage 1/3 Cannons
+354 - Blue Resort Stage 3 Moving Waterway
+355 - Blue Resort Stage 3 Fountain Statue Exit
+356 - Blue Resort Stage 1/3 Waterfall?
+357 - Blue Resort Stage 1/3 Waterfall?
+358 - Blue Resort Stage 3 Moving Level Geometry
+359 - Blue Resort Stage 1/3 Waterfall?
+360 - -
+361 - Cut out floor water?
+362 - Cut out floor water?
+363 - Cut out floor water?
+364 - Cut out floor water?
+365 - Cut out floor water?
+366 - Cut out floor water?
+367 - Blue Resort Stage 2
+368 - 
+369 - 
+370 - Blue Resort Stage 4 Raft Pieces?
+371 - Blue Resort Stage 4 Walls?
+372 - Blue Resort Stage 4 Water Plane
+373 - Blue Resort Stage 4 Tsunami?
+374 - -
+375 - Blue Resort Stage 4 Boss Tentacle
+376 - Blue Resort Stage 4 Boss Tentacle
+377 - Blue Resort Stage 4 Boss
+378 - 
+379 - 
+380 - Blue Resort Stage 4 WallFlame?
+381 - 
+382 - ?
+383 - 
+384 - Blue Resort Stage 4 Boss Antenna
+385 - -
+386 - Blue Resort Stage 4 Bubble?
+387 - Blue Resort Stage 4 Boss Water Splash
+388 - Blue Resort Stage 4 Boss Raft Attack
+389 - Red Mountain Stage 1 Starting Room
+390 - Red Mountain Stage 4 Lava Plane?
+391 - Red Mountain Stage 1 Room?
+392 - Red Mountain Stage 1/3 Lava Plane?
+393 - Red Mountain Stage 1 Room?
+394 - Red Mountain Stage 1/3 Lava Plane?
+395 - Red Mountain Stage 1 Room?
+396 - Red Mountain Stage 1/3 Lava Plane?
+397 - Red Mountain Stage 1 Room?
+398 - Red Mountain Stage 1/3 Lava Plane?
+399 - Red Mountain Stage 1 Secret Room
+400 - 
+401 - 
+402 - 
+403 - 
+404 - 
+405 - 
+406 - 
+407 - 
+408 - 
+409 - Red Mountain Stage 3 First Room
+410 - Red Mountain Stage 1/3 Lava Plane?
+411 - Red Mountain Stage 3 Second Room
+412 - Red Mountain Stage 1/3 Lava Plane?
+413 - Red Mountain Stage 3 Third Room
+414 - Red Mountain Stage 1/3 Lava Plane?
+415 - Red Mountain Lava Column?
+416 - Red Mountain Stage 3 Fourth Room
+417 - Red Mountain Lava Plane
+418 - Red Mountain Stage 3 Exit Room
+419 - Red Mountain Lava Plane
+420 - Red Mountain Stage 3 Room?
+421 - Red Mountain 3 First Room collision
+422 - Red Mountain 3 Second Room collision
+423 - Red Mountain 3 Third Room collision
+424 - Red Mountain 3 Fourth Room collision
+425 - Red Mountain 3 Exit Room collision
+426 - Red Mountain Stage 2 Mid Boss Room
+427 - -
+428 - Red Mountain Stage1 Short Boulder Bridge
+429 - Red Mountain Stage1 Tall Boulder Bridge
+430 - Red Mountain Stage 1 Ending Obstacle
+431 - Red Mountain Stage 1 Exit Support Column
+432 - Red Mountain Stage 3 Switch On
+433 - Red Mountain Stage 3 Spikes?
+434 - Red Mountain Stage 3 Spike Switch On
+435 - Red Mountain Stage 3 Switch Off
+436 - Red Mountain Stage 3 Spike Switch Off
+437 - Evil Power up 
+438 - Red Mountain Stage 3 Boulder Sprite
+439 - Red Mountain Stage 1/3 Fireball
+440 - Red Mountain Stage 3 Lifted Railway Exit
+441 - Red Mountain Stage 3 Railway Lift Exit
+442 - Red Mountain Stage 3 Railway Destroyed Lift Exit
+443 - Red Mountain Stage 3 Trolley Enemy
+444 - Two Planes Crossed?
+445 - -
+446 - Red Mountain Stage 1/3 Fireball
+447 - Red Mountain Stage 1 End Switch
+448 - Red Mountain Stage 1 End Switch
+449 - Red Mountain Stage? Level Geometry
+450 - Red Mountain Stage? Level Geometry
+451 - Red mountain Stage 2 Boss Door
+452 - Red Mountain Stage 4 Boss Base
+453 - Red Mountain Stage 4 Boss Eyes
+454 - Red Mountain Stage 4 Boss Hat
+455 - Red Mountain Stage 4 Boss Arms
+456 - Red Mountain Stage 4 Boss Hand Right
+457 - Red Mountain Stage 4 Boss Hand Left
+458 - Red Mountain Stage 4 Boss Body
+459 - Beam Attack? (Triangle Pillar)
+460 - Flat Square
+461 - Damage Sprite
+462 - Boss Explosions Black Fortress?
+463 - Flat Square
+464 - 
+465 - Red Mountain Stage 4 Room
+466 - -
+467 - Black Fortress Stage 1 Room Ceiling Walkway?
+468 - Black Fortress Stage 1 Room Highway?
+469 - Black Fortress Stage 1 Tunnel Entrance
+470 - Black Fortress Stage 1?
+471 - Black Fortress Stage 1 Room Ceiling Walway?
+472 - Black Fortress Stage 1 Tunnel room?
+473 - 
+474 - 
+475 - 
+476 - Black Fortress Stage 1 Room Ceiling Walkway?
+477 - 
+478 - Black Fortress Stage 1 Last Walkway Room
+479 - 
+480 - Black Fortress Stage 1 Exit Room
+481 - -
+482 - -
+483 - -
+484 - -
+485 - -
+486 - -
+487 - -
+488 - -
+489 - Black Fortress Stage 3 Starting Room
+490 - 
+491 - Black Fortress Stage 3 2nd Room?
+492 - 
+493 - Black Fortress Stage 3 3rd Room?
+494 - 
+495 - Black Fortress Stage 3 Exit Room
+496 - Black Fortress Stage 3 Platforms?
+497 - Black Fortress Stage 3 Room?
+498 - Black Fortress A6 Arrows Text
+499 - -
+500 - -
+501 - -
+502 - -
+503 - -
+504 - -
+505 - -
+506 - Black Fortress Stage 4 Boss Room
+507 - -
+508 - Space Pirate Emblem
+509 - ?
+510 - Flat Square
+511 - ?
+512 - Black Fortress Stage 4 Cutscene Platform
+513 - Multiplayer Map Rock Garden
+514 - Multiplayer Map Up and Down Bottom
+515 - Multiplayer Map Up and Down Top
+516 - Multiplayer Water Plane?
+517 - Multiplayer Map Up and Down Preview?
+518 - Multiplayer Map Pyramid
+519 - Multiplayer Map Greedy Trap
+520 - Multiplayer Map Greedy Trap
+521 - Greedy Trap Wall Hazard Left
+522 - Greedy Trap Wall Hazard Right
+523 - Multiplayer Water Plane?
+524 - Multiplayer Map unused multiplayer map
+525 - Multiplayer Map Top Rules Bottom
+526 - Top Rules Wall Hazard Left
+527 - Top Rules Wall Hazard Right
+528 - Multiplayer Map Top Rules Top
+529 - Multiplayer Map Field of Grass
+530 - Multiplayer Map In the Gutter
+531 - In the Gutter Wall Hazard Right
+532 - In the Gutter Wall Hazard Left
+533 - Multiplayer Water Plane?
+534 - Multiplayer Map Sea Sick
+535 - Multiplayer Map Blizzard Batte
+536 - Multiplayer Map Lost at Sea
+537 - -
+538 - -
+539 - -
+540 - -
+541 - -
+542 - -
+543 - -
+544 - -
+545 - -
+546 - -
+547 - White Glacier Stage 1 Starting Room
+548 - White Glacier Stage 1 2nd Room Bridges and fences
+549 - White Glacier Stage 1 2nd Room
+550 - White Glacier Stage 1 Exit Room
+551 - White Glacier Stage 1 Exit Room Bridges and fences
+552 - White Glacier Stage 1 2nd Room Bridges and fences
+553 - White Glacier Stage 1 2nd Room Bridges and fences
+554 - White Glacier Stage 1 2nd Room Bridges and fences
+555 - White Glacier Stage 3 Platform?
+556 - White Glacier Stage 3 Elevator
+557 - White Glacier Stage 2 Ice?
+558 - White Glacier Stage 3 Exit?
+559 - White Glacier Stage 3 Platform?
+560 - White Glacier Stage 2 Ice?
+561 - White Glacier Stage 3 Room door
+562 - White Glacier Stage 3 Platform?
+563 - White Glacier Stage 3 Next Stage (Stage 4)
+564 - White Glacier Stage 3 Ramp room
+565 - White Glacier Stage 3 Elevator
+566 - White Glacier Stage 2 Room
+567 - -
+568 - -
+569 - -
+570 - -
+571 - -
+572 - -
+573 - -
+574 - -
+575 - -
+576 - -
+577 - -
+578 - Green Garden Stage 1 Starting room
+579 - Green Garden Stage 1 2nd Room
+580 - Green Garden Stage 1 Hidden Room 1
+581 - Green Garden Stage 1 Hidden Room 2
+582 - Green Garden Stage 1 Hidden Room 3
+583 - Green Garden Stage 3 Starting Room
+584 - Green Garden Stage 3 2nd room
+585 - Green Garden Stage 3 hidden room?
+586 - Green Garden Stage 3 Exit Room
+587 - Green Garden Stage 2 Room
+588 - -
+589 - -
+590 - -
+591 - -
+592 - -
+593 - -
+594 - -
+595 - -
+596 - -
+597 - -
+598 - Multiplayer Map unused multiplayer map
+599 - -
+600 - ?
+601 - White Glacier Stage 1 Snowboard Combatant
+602 - Bomb Icon? Logo?
+603 - ?
+604 - White Glacier Stage 1 Tree Snow
+605 - White Glacier Stage 3 Icicle
+606 - Bomb Icon? Logo?
+607 - White Glacier Stage 1 Snowboard Cabin
+608 - White Glacier Stage 1 House Roof
+609 - White Glacier Stage 1 Ski Lift Exit
+610 - White Glacier Stage 1 Ski Lift Seat Exit
+611 - Flat Triangle
+612 - White Glacier Stage 1 Tree
+613 - Sphere
+614 - Bomb Icon? Logo?
+615 - Bomb Icon? Logo?
+616 - White Glacier Stage 4 Overworld
+617 - White Glacier Stage 1 Avalanche?
+618 - White Glacier Stage 1 Avalanche warning sign
+619 - ?
+620 - Rectangle Cube
+621 - White Glacier Stage 1 Flowers
+622 - White Glacier Stage 1 Flowers
+623 - Flat Triangle
+624 - Flat Triangle
+625 - Flat Triangle
+626 - Flat Triangle
+627 - Flat Triangle
+628 - Flat Triangle
+629 - 
+630 - 
+631 - 
+632 - 
+633 - 
+634 - 
+635 - 
+636 - White Glacier Stage 4 Floor Square
+637 - White Glacier Stage 4 Floor Triangle
+638 - White Glacier Stage 4 Room
+639 - White Glacier Stage 4 Boss
+640 - 
+641 - White Glacier Stage 4 Boss Jaw
+642 - White Glacier Stage 4 Mini Spiders
+643 - 
+644 - Flat Triangle
+645 - Green Garden Stage 4 Boss Wing?
+646 - Green Garden Stage 4 Boss Wing?
+647 - Green Garden Stage 4 Boss Wing?
+648 - Green Garden Stage 4 Boss Wing?
+649 - 
+650 - 
+651 - 
+652 - 
+653 - 
+654 - 
+655 - 
+656 - 
+657 - 
+658 - Green Garden Stage 4 Room
+659 - Green Garden Stage 4 Room Bridge
+660 - Green Garden Stage 4 Room Bridge
+661 - 
+662 - 
+663 - Green Garden Stage 4 Boss Body
+664 - 
+665 - 
+666 - 
+667 - 
+668 - Green Garden Stage 4 Boss Head
+669 - 
+670 - Green Garden Stage 4 Boss Tail 1?
+671 - Green Garden Stage 4 Boss Tail 2?
+672 - Green Garden Stage 4 Boss Tail 3?
+673 - Green Garden Stage 4 Boss Tail End
+674 - 
+675 - Flat Triangle
+676 - 
+677 - Green Garden Stage 1,3 Gem
+678 - Green Garden Stage 1,3 Gem
+679 - Blue Resort Stage 1 Flowers Pot?
+680 - Green Garden Stage 1,3 Dragon Head Door
+681 - 
+682 - Green Garden Stage 1 Mesh Roof
+683 - Green Garden Stage 1 Thin Column
+684 - Green Garden Stage 3 Lift Platform
+685 - Green Garden Stage 1 Blue Column
+686 - Green Garden Stage 1 Collapsing Column?
+687 - 
+688 - Green Garden Stage 1 Collapsing Bridge Square
+689 - Green Garden Stage 1 Orb Mount?
+690 - Green Garden Annoying Bird Stage 3
+691 - Green Garden Stage 1 Waterfall Room 2
+692 - Green Garden Stage 1 Waterfall Room 1
+693 - Green Garden Stage 1 Hidden Room Water?
+694 - Green Garden Stage 1 Hidden Room Water?
+695 - Green Garden Stage 1 Waterfall Hidden Room
+696 - Green Garden Stage 3 Water Plane Room 1?
+697 - Green Garden Stage 3 Water Plane Room 2
+698 - Green Garden Stage ? Water Plane
+699 - Green Garden Stage 1 Collapsing Bridge
+700 - Black Fortress Stage 2 Boss Room
+701 - 
+702 - Black Fortress Stage 2 Boss Body
+703 - 
+704 - 
+705 - Black Fortress Stage 2 Boss Body Front Clip
+706 - Black Fortress Stage 2 Boss Arms/Guns
+707 - Black Fortress Stage 2 Boss Guns
+708 - Black Fortress Stage 2 weapon?
+709 - Black Fortress Stage 2 Boss Arms/Guns
+710 - Black Fortress Stage 2 Boss Drone
+711 - Black Fortress Stage 2 Boss Effect Field
+712 - Black Fortress Stage 2 Boss Effect Field
+713 - Flat Square
+714 - 
+715 - Black Fortress Stage 2 Boss Missile1
+716 - Blue Pyramid Attack?
+717 - Blue/white wing? Sprite?
+718 - Mirror of 716
+719 - Triangle Pillar
+720 - Sprite Explosion/Flat Square?
+721 - Yellow Pyramid Attack?
+722 - Sprite Explosion/Flat Square?
+723 - Sprite Blue Energy
+724 - Explosion?
+725 - Black Fortress Stage 2 Drone Explosion 1
+726 - Black Fortress Stage 2 Drone Explosion 2
+727 - Black Fortress Stage 2 Boss Hidden Room
+728 - Black Fortress Stage 2 Boss Door?
+729 - Rainbow Palace Stage 1 Starting Room
+730 - Rainbow Palace Stage 3 Outside Room
+731 - Rainbow Palace Stage 3 Starting Room
+732 - Rainbow Palace Stage 3 Starting Room?
+733 - Rainbow Palace Stage 4 Room
+734 - Rainbow Palace Stage 4 Grid Floor
+735 - 
+736 - 
+737 - 
+738 - 
+739 - 
+740 - 
+741 - 
+742 - 
+743 - Rainbow Palace Stage 2 Room
+744 - 
+745 - Rainbow Palace Stage 2 Boss Mask Projectile
+746 - Rainbow Palace Stage 2 Boss Head
+747 - Rainbow Palace Stage 2 Boss Tassles
+748 - 
+749 - Rainbow Palace Stage 2 Boss Torso
+750 - Rainbow Palace Stage 2 Boss Shoulder Pads
+751 - Rainbow Palace Stage 2 Boss Shoe 1
+752 - Rainbow Palace Stage 2 Boss Mask Projectile
+753 - Rainbow Palace Stage 2 Boss Attack Shadow?
+754 - Rainbow Palace Stage 2 Boss Weaken Shadow
+755 - Rainbow Palace Stage 2 Boss Cape 1
+756 - Rainbow Palace Stage 2 Boss Cape 2
+757 - Rainbow Palace Stage 2 Boss Cape 3
+758 - Rainbow Palace Stage 2 Boss Cape 4
+759 - 
+760 - 
+761 - Rainbow Palace Stage 2 Boss Card 1
+762 - Rainbow Palace Stage 2 Boss Card 2
+763 - Rainbow Palace Stage 2 Boss Card 3
+764 - Rainbow Palace Stage 2 Boss Card 4
+765 - Rainbow Palace Stage 2 Boss Card 5
+766 - Rainbow Palace Stage 2 Boss Card 6
+767 - Rainbow Palace Stage 2 Boss Card 7
+768 - Rainbow Palace Stage 2 Boss Card 8
+769 - Rainbow Palace Stage 2 Boss Hand
+770 - Rainbow Palace Stage 2  Explosion
+771 - Rainbow Palace Stage 2  Internal Explosion
+772 - Rainbow Palace Stage 2 Flame Dragon Tail Sprite
+773 - Rainbow Palace Stage 2 Flame Dragon Head Attack
+774 - Rainbow Palace Stage 2 Star Attack
+775 - Yellow Orb? Flat Triangle
+776 - Rainbow Palace Stage 2 Boss Shoe 2
+777 - Rainbow Palace Stage 2 Boss Fist Attack 1
+778 - Rainbow Palace Stage 2 Boss Fist Attack 2
+779 - Rainbow Palace Stage 2 Boss Fist Attack Shadow
+780 - Rainbow Palace Stage 2 Boss Scythe Attack Call
+781 - Flat Triangle
+782 - Flat Trapezium
+783 - Flat Trapezium
+784 - Flat Trapezium
+785 - Flat Trapezium
+786 - 16t Anvil
+787 - Flat Triangle Power up, Two Orbs and link
+788 - Blade?
+789 - Flat Triangle
+790 - Rainbow Palace Stage 1 Purple Floating Block
+791 - Rainbow Palace Stage 3 Starting Door
+792 - Stainglass window used?
+793 - Rainbow Palace Stage 3 Light?
+794 - RGBA 32 x 32 Light Texture?
+795 - Rainbow Palace Stage 3 Stainglass Window
+796 - Rainbow Palace Stage 1 exit Archway
+797 - Rainbow Palace Stage 1 Floor Block
+798 - Rainbow Palace Stage 1 Rainbow?
+799 - RGBA 32 x 32 Rainbow Texture?
+800 - Artemis Head
+801 - Orion Head
+802 - Regulus Head
+803 - Sirius no wings
+804 - Altair Head
+805 - Altair Final Form Head
+806 - Altair Final Form Head
+807 - Vega
+808 - Sirius wings
+809 - Blue Resort Cutscene Bird
+810 - Artemis Attack
+811 - Blue Attack
+812 - 
+813 - 
+814 - 
+815 - Black Fortress Stage 4 Boss Final Form Knockback attack
+816 - 
+817 - 
+818 - 
+819 - 
+820 - 
+821 - 
+822 - 
+823 - 
+824 - 
+825 - 
+826 - Cutscene Hill Viewpoint
+827 - -
+828 - End Cutscene Critter?
+829 - End Cutscene Critter?
+830 - End Cutscene Bird
+831 - -
+832 - Planet Bomber
+833 - Flat Triangle
+834 - Intro Cutscene Machine
+835 - Intro Cut Scene Town
+836 - Intro Cut Scene Clouds?
+837 - Intro Cut Scene Windmill Fan
+838 - Omni Cube
+839 - Planet Bomber
+840 - Planet Bomber
+841 - Planet Bomber
+842 - Planet Bomber
+843 - -
+844 - -
+845 - Space Pirates Base Shadow Intro Cutscene
+846 - -
+847 - Green Garden Stage 1 Totem Head
+848 - Mantaray?
+849 - Mantaray Shadow?
+850 - Water around white edge and blue square?
+851 - 
+852 - 
+853 - 
+854 - 
+855 - 
+856 - 
+857 - 
+858 - 
+859 - 
+860 - 
+861 - 
+862 - 
+863 - 
+864 - 
+865 - 
+866 - 
+867 - 
+868 - 
+869 - Intro Grid Floor? 16 x 16
+870 - 
+871 - 
+872 - 
