@@ -406,7 +406,7 @@
 405 - 
 406 - 
 407 - 
-408 - 
+408 - Red Mountain Little Room collision
 409 - Red Mountain Stage 3 First Room
 410 - Red Mountain Stage 1/3 Lava Plane?
 411 - Red Mountain Stage 3 Second Room
@@ -425,7 +425,7 @@
 424 - Red Mountain 3 Fourth Room collision
 425 - Red Mountain 3 Exit Room collision
 426 - Red Mountain Stage 2 Mid Boss Room
-427 - -
+427 - Red Mountain Stage 2 Mid Boss Room collision
 428 - Red Mountain Stage1 Short Boulder Bridge
 429 - Red Mountain Stage1 Tall Boulder Bridge
 430 - Red Mountain Stage 1 Ending Obstacle
@@ -586,11 +586,11 @@
 585 - Green Garden Stage 3 hidden room?
 586 - Green Garden Stage 3 Exit Room
 587 - Green Garden Stage 2 Room
-588 - -
-589 - -
-590 - -
-591 - -
-592 - -
+588 - Green Garden Stage 1 Starting Room collision
+589 - Green Garden Stage 1 2nd Room collision
+590 - Green Garden Stage 1 Hidden Room 1 collision
+591 - Green Garden Stage 1 Hidden Room 2 collision
+592 - Green Garden Stage 1 Hidden Room 3 collision
 593 - -
 594 - -
 595 - -

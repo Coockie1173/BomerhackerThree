@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QColor>
 #include <QRgb>
+#include <QGraphicsSceneMouseEvent>
 
 LayerFileItem::LayerFileItem()
 {
@@ -11,8 +12,18 @@ LayerFileItem::LayerFileItem()
 
 void LayerFileItem::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    qDebug() << "Custom item clicked.";
+    if (event->button() == Qt::LeftButton)
+    {
+        // Handle left mouse button click
+        emit clicked(this, DataItem);
+    }
+    else if (event->button() == Qt::RightButton)
+    {
+        // Handle right mouse button click
+        emit RightClicked(this);
+    }
 }
+
 
 void LayerFileItem::RefreshVisual()
 {
@@ -62,6 +73,11 @@ void LayerFileItem::RefreshVisual()
     {
         //ramp up
         setBrush(Qt::red);
+        break;
+    }
+    case 9:
+    {
+        setBrush(Qt::darkRed);
         break;
     }
     case 0xF:

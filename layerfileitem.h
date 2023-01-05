@@ -16,8 +16,15 @@ public:
     int DataPos;
     int Subsection;
     int Layer;
+    int X;
+    int Y;
 
     void RefreshVisual();
+
+signals:
+    // Declare the signal
+    void clicked(LayerFileItem *item, int DataItem);
+    void RightClicked(LayerFileItem *item);
 
 private:
 

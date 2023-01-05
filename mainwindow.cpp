@@ -6,6 +6,10 @@
 #include <QFileInfo>
 #include <algorithm>    // std::sort
 #include "layerfileitem.h"
+#include <QBuffer>
+#include <QVector3D>
+#include <QDataStream>
+#define EXPORTSQUARESIZE 10
 
 QGraphicsScene* LayerScene;
 int SquareSize = 10;
@@ -48,7 +52,22 @@ MainWindow::MainWindow(QWidget *parent)
 
     for(int i = 0; i < 0x10; i++)
     {
-        ui->GroundTypeComboBox->addItem(ItemIdentifiers[i]);
+        ui->GroundTypeComboBox->addItem(FloorIdentifier[i]);
+        if(i == 9)
+        {
+            ui->ItemTypeComboBox->addItem(ItemIdentifier[i] + " - Playerspawn");
+        }
+        else
+        {
+            ui->ItemTypeComboBox->addItem(ItemIdentifier[i]);
+        }
+    }
+
+    ui->EnemyCombobox->addItem("No enemy");
+
+    for(int i = 1; i< 0x07; i++)
+    {
+        ui->EnemyCombobox->addItem("Enemy ID " + QString::number(i));
     }
 
     file.close();
@@ -206,6 +225,10 @@ void MainWindow::RefreshLayerFile()
     CurrentSelectedItem = nullptr;
     LayerScene->clear(); //remove all objects here
 
+    ui->GroundTypeComboBox->setEnabled(false);
+    ui->ItemTypeComboBox->setEnabled(false);
+    ui->EnemyCombobox->setEnabled(false);
+
     for(int i = this->LFH->LFI->count() - 1; i >= 0; i --)
     {
         this->LFH->LFI->at(i)->clear(); //remove all individual objects
@@ -236,7 +259,34 @@ void MainWindow::RefreshLayerFile()
                     L->DataPos = xx * 8 + w;
                     L->setRect(0,0,SquareSize,SquareSize); //100x100 square
                     L->RefreshVisual();
+                    QObject::connect(L, &LayerFileItem::clicked, [=](LayerFileItem *item, int DataItem) {
+                        //okay we got our data here now yippee
+                        userInput = false;
+                        ui->GroundTypeComboBox->setEnabled(true);
+                        ui->ItemTypeComboBox->setEnabled(true);                        
+                        ui->GroundTypeComboBox->setCurrentIndex(DataItem & 0b00001111);
+                        ui->ItemTypeComboBox->setCurrentIndex((DataItem >> 4) & 0b00001111);
+                        ui->EnemyCombobox->setCurrentIndex((DataItem >> 8) & 0b00001111);
+                        ui->EnemyCombobox->setEnabled(true);                        
+                        ui->LayerfileEditorValueBox->setValue(DataItem);
+                        CurrentSelectedItem = item;
+                        ui->spinBoxXVal->setValue(item->X);
+                        ui->spinBoxYVal->setValue(item->Y);
+                        userInput = true;
+                    });
+                    QObject::connect(L, &LayerFileItem::RightClicked, [=](LayerFileItem *item){
+                        if(CurrentSelectedItem != nullptr)
+                        {
+                            userInput = false;
+                            item->DataItem = CurrentSelectedItem->DataItem;
+                            this->LFH->LoadedFile->Sections->at(LayerLevel)->SubSections->at(item->Subsection)->Data->replace(item->DataPos, (short unsigned int)item->DataItem);
+                            userInput = true;
+                            item->RefreshVisual();
+                        }
+                    });
                     buftwo->append(L);
+                    L->Y = y * 8 + xx;
+                    L->X = x * 8 + w;
                 }
             }
             this->LFH->LFI->append(buftwo);
@@ -277,7 +327,377 @@ void MainWindow::on_Zoomslider_valueChanged(int value)
 void MainWindow::on_LayerSelectSlider_valueChanged(int value)
 {
     LayerLevel = value;
-    qDebug() << value;
+    ui->HeightOffsetPerLayerSpinBox->setValue(LFH->LoadedFile->Sections->at(LayerLevel)->HeightOffset);
+    ui->HeightOffsetPerLayerSpinBox->setEnabled(true);
     RefreshLayerFile();
 }
 
+
+void MainWindow::on_SaveBinButton_clicked()
+{
+    // Convert to binary -> download
+    QByteArray OutFile;
+    qint32 Length = 0;
+    QDataStream dataStream(&OutFile, QIODevice::WriteOnly);
+    dataStream.setByteOrder(QDataStream::BigEndian);
+
+    dataStream << LFH->LoadedFile->Header;
+    Length += 4;
+    dataStream << LFH->LoadedFile->DeathOffset;
+    Length++;
+
+    for (int i = 0; i < LFH->LoadedFile->Sections->length(); i++) {
+        dataStream << LFH->LoadedFile->Sections->at(i)->AmmPartsInSubsections;
+        Length++;
+        dataStream << LFH->LoadedFile->Sections->at(i)->AmmSubsections;
+        Length++;
+        dataStream << LFH->LoadedFile->Sections->at(i)->HeightOffset;
+        Length++;
+        for (int j = 0; j < LFH->LoadedFile->Sections->at(i)->SubSections->length(); j++) {
+            dataStream << LFH->LoadedFile->Sections->at(i)->SubSections->at(j)->HeaderbyteOne;
+            Length++;
+            dataStream << LFH->LoadedFile->Sections->at(i)->SubSections->at(j)->HeaderbyteTwo;
+            Length++;
+            for (int k = 0; k < LFH->LoadedFile->Sections->at(i)->SubSections->at(j)->Data->length(); k++) {
+                dataStream << LFH->LoadedFile->Sections->at(i)->SubSections->at(j)->Data->at(k);
+                Length += 2;
+            }
+        }
+    }
+
+    QString fileName = QFileDialog::getSaveFileName(nullptr, tr("Save Binary File"), QString(), tr("Binary Files (*.bin)"));
+    if (!fileName.isEmpty()) {
+        QFile file(fileName);
+        if (file.open(QIODevice::WriteOnly)) {
+            file.write(OutFile.constData(), Length);
+            file.close();
+        }
+    }
+}
+
+
+void MainWindow::on_GroundTypeComboBox_currentIndexChanged(int index)
+{
+    if (!userInput)
+        return;
+
+    if(CurrentSelectedItem != nullptr)
+    {
+        CurrentSelectedItem->DataItem &= 0b11111111111110000;
+        CurrentSelectedItem->DataItem |= (0b00001111 & index);
+        CurrentSelectedItem->RefreshVisual();
+        this->LFH->LoadedFile->Sections->at(LayerLevel)->SubSections->at(CurrentSelectedItem->Subsection)->Data->replace(CurrentSelectedItem->DataPos, (short unsigned int)CurrentSelectedItem->DataItem);
+    }
+}
+
+
+void MainWindow::on_ItemTypeComboBox_currentIndexChanged(int index)
+{
+    if (!userInput)
+        return;
+
+    if(CurrentSelectedItem != nullptr)
+    {
+        CurrentSelectedItem->DataItem &= 0b11111111100001111;
+        CurrentSelectedItem->DataItem |= (0b11110000 & (index << 4));
+        CurrentSelectedItem->RefreshVisual();
+        this->LFH->LoadedFile->Sections->at(LayerLevel)->SubSections->at(CurrentSelectedItem->Subsection)->Data->replace(CurrentSelectedItem->DataPos, (short unsigned int)CurrentSelectedItem->DataItem);
+    }
+}
+
+void MainWindow::on_ClearfileButton_clicked()
+{
+    for (int i = 0; i < LFH->LoadedFile->Sections->length(); i++) {
+        for (int j = 0; j < LFH->LoadedFile->Sections->at(i)->SubSections->length(); j++) {
+            for (int k = 0; k < LFH->LoadedFile->Sections->at(i)->SubSections->at(j)->Data->length(); k++) {
+                LFH->LoadedFile->Sections->at(i)->SubSections->at(j)->Data->replace(k, 0x10);
+            }
+        }
+    }
+
+    RefreshLayerFile();
+}
+
+
+void MainWindow::on_EnemyCombobox_currentIndexChanged(int index)
+{
+    if (!userInput)
+        return;
+
+    if(CurrentSelectedItem != nullptr)
+    {
+        CurrentSelectedItem->DataItem &= 0b11111000011111111;
+        CurrentSelectedItem->DataItem |=  (index << 8);
+        this->LFH->LoadedFile->Sections->at(LayerLevel)->SubSections->at(CurrentSelectedItem->Subsection)->Data->replace(CurrentSelectedItem->DataPos, (short unsigned int)CurrentSelectedItem->DataItem);
+        CurrentSelectedItem->RefreshVisual();
+    }
+}
+
+
+void MainWindow::on_BinLoader_clicked()
+{
+    QString Wantedfile = QFileDialog::getOpenFileName(this, tr("Open file"));
+    QFile file(Wantedfile);
+
+    if(file.open(QIODevice::ReadOnly))
+    {
+        this->LFH->LoadLayerFile(file.readAll());
+        this->ui->LayerSelectSlider->setValue(0);
+        this->ui->LayerSelectSlider->setMaximum(this->LFH->LoadedFile->Sections->count() - 1);
+    }
+
+    RefreshLayerFile();
+}
+
+
+void MainWindow::on_HeightOffsetPerLayerSpinBox_valueChanged(int arg1)
+{
+    this->LFH->LoadedFile->Sections->at(LayerLevel)->HeightOffset = arg1;
+}
+
+int GeneratePlane(QString objectName, float x, float y, float z, QColor color, QString colorName, int index)
+{
+    qDebug() << x << " " << z << endl;
+
+    QFile objFile(objectName + ".obj");
+    if (objFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
+        QTextStream out(&objFile);
+
+        out << "v " << x << " " << y << " " << z << endl;
+        out << "v " << x+EXPORTSQUARESIZE << " " << y << " " << z << endl;
+        out << "v " << x+EXPORTSQUARESIZE << " " << y << " " << z + EXPORTSQUARESIZE << endl;
+        out << "v " << x << " " << y << " " << z + EXPORTSQUARESIZE << endl;
+
+        out << "usemtl " << colorName << endl;
+        out << "f " << index << " " << index+1 << " " << index+2 << " " << index+3 << endl;
+        objFile.close();
+    }
+
+    QFile mtlFile(objectName + ".mtl");
+    if (mtlFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream in(&mtlFile);
+        QString line;
+        bool colorNameExists = false;
+        while (in.readLineInto(&line)) {
+            if (line.startsWith("newmtl " + colorName)) {
+                colorNameExists = true;
+                break;
+            }
+        }
+        mtlFile.close();
+
+        if (!colorNameExists) {
+            if (mtlFile.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append)) {
+                QTextStream out(&mtlFile);
+                out << "newmtl " << colorName << endl;
+                out << "Kd " << color.redF() << " " << color.greenF() << " " << color.blueF() << endl;
+                mtlFile.close();
+            }
+        }
+    }
+
+    return index + 4;
+}
+
+
+void MainWindow::GenerateObj(QString objectName)
+{
+    QFile objFile(objectName + ".obj");
+    if (objFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&objFile);
+        out << "mtllib " << objectName + ".mtl" << endl;
+
+        objFile.close();
+    }
+
+    QFile mtlFile(objectName + ".mtl");
+    if (mtlFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        QTextStream out(&mtlFile);
+        out << "";
+        mtlFile.close();
+    }
+
+    int index = 1;
+    float HeightOffset = 0;
+    QVector3D SpawnPos(0,0,0);
+
+    for(int Y = 0; Y < this->LFH->LoadedFile->Sections->size(); Y++)
+    {
+        QList<LayerfileHandler::SubSection*>* buf = this->LFH->LoadedFile->Sections->at(Y)->SubSections;
+
+        std::sort(buf->begin(), buf->end(), [=](LayerfileHandler::SubSection* a, LayerfileHandler::SubSection* b)->bool{
+            return (a->HeaderbyteTwo > b->HeaderbyteTwo) ? true : (a->HeaderbyteOne > b->HeaderbyteOne) ? true : false;
+        });
+
+        std::reverse(buf->begin(), buf->end());
+
+        for(int y = 0; y < buf->size(); y++)
+        {
+            /*for(int xx = 0; xx < 8; xx++)
+            {
+                for(int x = 0; x < this->LFH->LoadedFile->Sections->at(Y)->AmmPartsInSubsections; x++)
+                {
+
+                    int Subsection = y * this->LFH->LoadedFile->Sections->at(LayerLevel)->AmmPartsInSubsections + x;
+                    ushort val = buf->at(Subsection)->Data->at(xx * 8 + w);
+                    if(val & 0b00001111 != 0)
+                    {
+                        QColor MyCol;
+                        switch(val & 0b00001111)
+                        {
+                        case 0:
+                        {
+                            //air
+                            MyCol = (Qt::blue);
+                            break;
+                        }
+                        case 1:
+                        {
+                            //floor
+                            QRgb col = 0xFFA500;
+                            QColor oreng(col);
+
+                            MyCol = oreng;
+                            break;
+                        }
+                        case 2:
+                        {
+                            //TransitionSquare
+                            QColor oreng(Qt::green);
+                            MyCol = oreng;
+                            break;
+                        }
+                        case 3:
+                        {
+                            //ramp down
+                            MyCol = (Qt::red);
+                            break;
+                        }
+                        case 4:
+                        {
+                            //ramp left
+                            MyCol = (Qt::red);
+                            break;
+                        }
+                        case 5:
+                        {
+                            //ramp right
+                            MyCol = (Qt::red);
+                            break;
+                        }
+                        case 6:
+                        {
+                            //ramp up
+                            MyCol = (Qt::red);
+                            break;
+                        }
+                        case 9:
+                        {
+                            MyCol = (Qt::darkRed);
+                            break;
+                        }
+                        case 0xF:
+                        {
+                            MyCol = (Qt::gray);
+                            break;
+                        }
+                        }
+                        index = GeneratePlane(objectName, X*10, HeightOffset, Z*10, MyCol, MyCol.name(), index);
+                    }
+                }
+            }*/
+            for(int z = 0; z  < 8; z++)
+            {
+                for(int x = 0; x < 8; x++)
+                {
+                    LayerfileHandler::SubSection ss = *(buf->at(y));
+                    QVector3D BufOffset = SpawnPos + QVector3D(x, 0, z) + QVector3D((ss.HeaderbyteOne * 8), 0, (ss.HeaderbyteTwo * 8));
+                    uint val = ss.Data->at(x + z * 8);
+                    bool denied = false;
+
+                    QColor MyCol;
+                    switch(val & 0b00001111)
+                    {
+                        case 0:
+                        {
+                            //air
+                            denied = true;
+                            break;
+                        }
+                        case 1:
+                        {
+                            //floor
+                            QRgb col = 0xFFA500;
+                            QColor oreng(col);
+
+                            MyCol = oreng;
+                            break;
+                        }
+                        case 2:
+                        {
+                            //TransitionSquare
+                            QColor oreng(Qt::green);
+                            MyCol = oreng;
+                            break;
+                        }
+                        case 3:
+                        {
+                            //ramp down
+                            MyCol = (Qt::red);
+                            break;
+                        }
+                        case 4:
+                        {
+                            //ramp left
+                            MyCol = (Qt::red);
+                            break;
+                        }
+                        case 5:
+                        {
+                            //ramp right
+                            MyCol = (Qt::red);
+                            break;
+                        }
+                        case 6:
+                        {
+                            //ramp up
+                            MyCol = (Qt::red);
+                            break;
+                        }
+                        case 9:
+                        {
+                            MyCol = (Qt::darkRed);
+                            break;
+                        }
+                        case 0xF:
+                {
+                    MyCol = (Qt::gray);
+                    break;
+                    }
+
+                    }
+                    int offsetter = EXPORTSQUARESIZE / 2;
+
+                    if(!denied)
+                    {
+                        index = GeneratePlane(objectName, BufOffset.x() * EXPORTSQUARESIZE - offsetter, BufOffset.y() * EXPORTSQUARESIZE, BufOffset.z() * EXPORTSQUARESIZE - offsetter, MyCol, MyCol.name(), index);
+                    }
+                }
+            }
+        }
+
+        SpawnPos.setY(SpawnPos.y() + (this->LFH->LoadedFile->Sections->at(Y)->HeightOffset));
+    }
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QFileDialog fileDialog;
+    fileDialog.setAcceptMode(QFileDialog::AcceptSave);
+    fileDialog.setDefaultSuffix("obj");
+    if (fileDialog.exec() == QDialog::Accepted) {
+        QString objectName = fileDialog.selectedFiles().first();
+        objectName.chop(4); // remove ".obj" from the end of the string
+        GenerateObj(objectName);
+    }
+}
