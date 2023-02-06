@@ -365,7 +365,7 @@ void MainWindow::on_SaveBinButton_clicked()
         }
     }
 
-    QString fileName = QFileDialog::getSaveFileName(nullptr, tr("Save Binary File"), QString(), tr("Binary Files (*.bin)"));
+    QString fileName = QFileDialog::getSaveFileName(this, "Save binary", "col.bin", "BIN files (*.bin)");
     if (!fileName.isEmpty()) {
         QFile file(fileName);
         if (file.open(QIODevice::WriteOnly)) {
@@ -469,7 +469,7 @@ int GeneratePlane(QString objectName, float x, float y, float z, QColor color, Q
         out << "v " << x << " " << y << " " << z + EXPORTSQUARESIZE << endl;
 
         out << "usemtl " << colorName << endl;
-        out << "f " << index << " " << index+1 << " " << index+2 << " " << index+3 << endl;
+        out << "f " << index+3 << " " << index+2 << " " << index+1 << " " << index << endl;
         objFile.close();
     }
 
@@ -533,79 +533,6 @@ void MainWindow::GenerateObj(QString objectName)
 
         for(int y = 0; y < buf->size(); y++)
         {
-            /*for(int xx = 0; xx < 8; xx++)
-            {
-                for(int x = 0; x < this->LFH->LoadedFile->Sections->at(Y)->AmmPartsInSubsections; x++)
-                {
-
-                    int Subsection = y * this->LFH->LoadedFile->Sections->at(LayerLevel)->AmmPartsInSubsections + x;
-                    ushort val = buf->at(Subsection)->Data->at(xx * 8 + w);
-                    if(val & 0b00001111 != 0)
-                    {
-                        QColor MyCol;
-                        switch(val & 0b00001111)
-                        {
-                        case 0:
-                        {
-                            //air
-                            MyCol = (Qt::blue);
-                            break;
-                        }
-                        case 1:
-                        {
-                            //floor
-                            QRgb col = 0xFFA500;
-                            QColor oreng(col);
-
-                            MyCol = oreng;
-                            break;
-                        }
-                        case 2:
-                        {
-                            //TransitionSquare
-                            QColor oreng(Qt::green);
-                            MyCol = oreng;
-                            break;
-                        }
-                        case 3:
-                        {
-                            //ramp down
-                            MyCol = (Qt::red);
-                            break;
-                        }
-                        case 4:
-                        {
-                            //ramp left
-                            MyCol = (Qt::red);
-                            break;
-                        }
-                        case 5:
-                        {
-                            //ramp right
-                            MyCol = (Qt::red);
-                            break;
-                        }
-                        case 6:
-                        {
-                            //ramp up
-                            MyCol = (Qt::red);
-                            break;
-                        }
-                        case 9:
-                        {
-                            MyCol = (Qt::darkRed);
-                            break;
-                        }
-                        case 0xF:
-                        {
-                            MyCol = (Qt::gray);
-                            break;
-                        }
-                        }
-                        index = GeneratePlane(objectName, X*10, HeightOffset, Z*10, MyCol, MyCol.name(), index);
-                    }
-                }
-            }*/
             for(int z = 0; z  < 8; z++)
             {
                 for(int x = 0; x < 8; x++)

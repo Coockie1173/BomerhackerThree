@@ -591,11 +591,11 @@
 590 - Green Garden Stage 1 Hidden Room 1 collision
 591 - Green Garden Stage 1 Hidden Room 2 collision
 592 - Green Garden Stage 1 Hidden Room 3 collision
-593 - -
-594 - -
-595 - -
-596 - -
-597 - -
+593 - Green Garden Stage 3 Starting Room collision
+594 - Green Garden Stage 3 2nd Room collision
+595 - Green Garden Stage 3 hidden room collision
+596 - Green Garden Stage 3 Exit Room collision
+597 - Green Garden Stage 2 Room collision
 598 - Multiplayer Map unused multiplayer map
 599 - -
 600 - ?
